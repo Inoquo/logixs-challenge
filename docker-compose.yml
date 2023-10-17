@@ -1,0 +1,39 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: my-postgres-container
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+
+  cursos-ms:
+    build:
+      context: ./cursos-service
+    container_name: cursos-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  estudiantes-ms:
+    build:
+      context: ./estudiantes-service
+    container_name: estudiantes-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8765:8765"
+    depends_on:
+      - cursos-service
+      - estudiantes-service

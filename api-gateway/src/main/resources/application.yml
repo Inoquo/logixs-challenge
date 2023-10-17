@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-host:port/eureka/
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: cursos-service
+          uri: http://cursos-ms:8080
+          predicates:
+            - Path=/cursos/**
+        - id: estudiantes-service
+          uri: http://estudiantes-ms:8080
+          predicates:
+            - Path=/estudiantes/**
