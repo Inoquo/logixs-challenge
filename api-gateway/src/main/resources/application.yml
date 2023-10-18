@@ -14,3 +14,5 @@ spring:
           uri: http://estudiantes-ms:8080
           predicates:
             - Path=/estudiantes/**
+  datasource:
+    initialize: false

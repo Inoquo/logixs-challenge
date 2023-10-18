@@ -1,7 +1,24 @@
 spring:
   application:
     name: cursos-ms
-
+  datasource:
+    url: jdbc:postgresql://postgres:5432/challengedb
+    username: user
+    password:
+    driver-class-name: org.postgresql.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    hibernate:
+#      database: challengedb
+#      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
 eureka:
   client:
     serviceUrl:

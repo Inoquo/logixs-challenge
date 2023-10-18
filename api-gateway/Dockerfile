@@ -1,5 +1,5 @@
 FROM openjdk:17-oracle
-WORKDIR /app
+#WORKDIR /app
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} api-gateway.jar
 EXPOSE 8765
