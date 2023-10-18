@@ -1,5 +1,6 @@
-FROM adoptopenjdk:17-jre
+FROM openjdk:17-oracle
 WORKDIR /app
-COPY target/estudiantes-ms.jar estudiantes-ms.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} estudiantes-ms.jar
 EXPOSE 8081
 CMD ["java", "-jar", "estudiantes-ms.jar"]

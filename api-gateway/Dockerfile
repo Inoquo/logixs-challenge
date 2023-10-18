@@ -1,5 +1,6 @@
-FROM adoptopenjdk:17-jre
+FROM openjdk:17-oracle
 WORKDIR /app
-COPY target/api-gateway.jar api-gateway.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} api-gateway.jar
 EXPOSE 8765
 CMD ["java", "-jar", "api-gateway.jar"]
