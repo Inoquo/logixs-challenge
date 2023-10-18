@@ -43,6 +43,8 @@ services:
     depends_on:
       - cursos-service
       - estudiantes-service
+    networks:
+      - network
 
   keycloak:
     image: jboss/keycloak
