@@ -4,9 +4,9 @@ services:
     image: postgres:latest
     container_name: postgres
     environment:
-      POSTGRES_DB: challenge_db
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_DB: challengedb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
     ports:
       - "5432:5432"
     networks:
@@ -22,6 +22,11 @@ services:
       - postgres
     networks:
       - network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/challengedb
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+
 
   estudiantes-ms:
     build:
@@ -33,6 +38,10 @@ services:
       - postgres
     networks:
       - network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/challengedb
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
 
   api-gateway:
     build:
