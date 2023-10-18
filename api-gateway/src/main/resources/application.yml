@@ -6,11 +6,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: cursos-service
+        - id: cursos-ms
           uri: http://cursos-ms:8080
           predicates:
             - Path=/cursos/**
-        - id: estudiantes-service
+        - id: estudiantes-ms
           uri: http://estudiantes-ms:8080
           predicates:
             - Path=/estudiantes/**
