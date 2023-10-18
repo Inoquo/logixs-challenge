@@ -62,4 +62,4 @@ services:
       - network
 
 networks:
-  my-network:
+  network:
