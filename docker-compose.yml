@@ -2,11 +2,11 @@ version: '3'
 services:
   postgres:
     image: postgres:latest
-    container_name: my-postgres-container
+    container_name: postgres-container
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: challenge_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
 
