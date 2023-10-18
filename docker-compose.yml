@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres-container
+    container_name: postgres
     environment:
       POSTGRES_DB: challenge_db
       POSTGRES_USER: user
@@ -14,8 +14,8 @@ services:
 
   cursos-ms:
     build:
-      context: ./cursos-service
-    container_name: cursos-service
+      context: ./cursos-ms
+    container_name: cursos-ms
     ports:
       - "8080:8080"
     depends_on:
@@ -25,8 +25,8 @@ services:
 
   estudiantes-ms:
     build:
-      context: ./estudiantes-service
-    container_name: estudiantes-service
+      context: ./estudiantes-ms
+    container_name: estudiantes-ms
     ports:
       - "8081:8081"
     depends_on:
@@ -41,8 +41,9 @@ services:
     ports:
       - "8765:8765"
     depends_on:
-      - cursos-service
-      - estudiantes-service
+      - cursos-ms
+      - estudiantes-ms
+      - keycloak
     networks:
       - network
 
