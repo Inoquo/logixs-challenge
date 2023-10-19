@@ -17,4 +17,8 @@ public interface CursoService {
 
     List<Curso> listarCursos();
 
+    Curso inscribirEstudianteEnCurso(Long cursoId, Long estudianteId);
+
+    Curso desinscribirEstudianteDeCurso(Long cursoId, Long estudianteId);
+
 }

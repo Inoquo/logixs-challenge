@@ -1,18 +1,26 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka:8761/eureka/
 spring:
+  application:
+    name: api-gateway
   cloud:
     gateway:
       routes:
-        - id: cursos-ms
-          uri: http://cursos-ms:8080
-          predicates:
-            - Path=/cursos/**
-        - id: estudiantes-ms
-          uri: http://estudiantes-ms:8080
+        - id: estudiantes-ms-route
+          uri: lb://estudiantes-ms
           predicates:
             - Path=/estudiantes/**
-  datasource:
-    initialize: false
+        - id: cursos-ms-route
+          uri: lb://cursos-ms
+          predicates:
+            - Path=/cursos/**
+      discovery:
+        locator:
+          enabled: true
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+

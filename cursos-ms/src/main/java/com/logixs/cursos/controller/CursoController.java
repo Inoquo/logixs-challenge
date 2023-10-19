@@ -1,10 +1,11 @@
 package com.logixs.cursos.controller;
 
 import com.logixs.cursos.dto.CursoDTO;
+import com.logixs.cursos.dto.EstudianteDTO;
 import com.logixs.cursos.mapper.CursoMapper;
 import com.logixs.cursos.model.Curso;
+import com.logixs.cursos.restClient.EstudianteRestClient;
 import com.logixs.cursos.service.CursoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,77 +17,102 @@ import java.util.Optional;
 @RequestMapping("/cursos")
 public class CursoController {
 
-    @Autowired
-    CursoService cursoService;
+    private final CursoService cursoService;
 
-    @Autowired
-    CursoMapper cursoMapper;
+    private final CursoMapper cursoMapper;
+
+    private final EstudianteRestClient estudianteRestClient;
+
+    public CursoController(CursoService cursoService, CursoMapper cursoMapper, EstudianteRestClient estudianteRestClient) {
+        this.cursoService = cursoService;
+        this.cursoMapper = cursoMapper;
+        this.estudianteRestClient = estudianteRestClient;
+    }
 
     @PostMapping
     public ResponseEntity<CursoDTO> crearCurso(@RequestBody CursoDTO cursoDTO) {
-        // Lógica para crear un curso
-        Curso nuevoCurso = cursoService.crearCurso(cursoMapper.toEntity(cursoDTO));
-        return new ResponseEntity<>(cursoMapper.toDto(nuevoCurso), HttpStatus.CREATED);
+        try {
+            if (Optional.ofNullable(cursoDTO).isEmpty()) return ResponseEntity.badRequest().build();
+            Curso nuevoCurso = cursoService.crearCurso(cursoMapper.toEntity(cursoDTO));
+            return ResponseEntity.status(HttpStatus.CREATED).body(cursoMapper.toDto(nuevoCurso));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @GetMapping("/{cursoId}")
     public ResponseEntity<CursoDTO> obtenerCurso(@PathVariable Long cursoId) {
-        // Lógica para obtener un curso por ID
-        Optional<Curso> curso = cursoService.obtenerCursoPorId(cursoId);
-        return ResponseEntity.ok(cursoMapper.toDto(curso.get()));
+        try {
+            if (Optional.ofNullable(cursoId).isEmpty()) return ResponseEntity.badRequest().build();
+            Optional<Curso> curso = cursoService.obtenerCursoPorId(cursoId);
+            return curso.map(value -> ResponseEntity.ok(cursoMapper.toDto(value))).orElseGet(() -> ResponseEntity.notFound().build());
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @PutMapping("/{cursoId}")
     public ResponseEntity<CursoDTO> actualizarCurso(@PathVariable Long cursoId, @RequestBody CursoDTO cursoDTO) {
-        // Lógica para actualizar un curso por ID
-        Curso cursoActualizado = cursoService.actualizarCurso(cursoId, cursoMapper.toEntity(cursoDTO));
-        return ResponseEntity.ok(cursoMapper.toDto(cursoActualizado));
+        try {
+            if (Optional.ofNullable(cursoId).isEmpty() || Optional.ofNullable(cursoDTO).isEmpty())
+                return ResponseEntity.badRequest().build();
+            Curso cursoActualizado = cursoService.actualizarCurso(cursoId, cursoMapper.toEntity(cursoDTO));
+            return ResponseEntity.ok(cursoMapper.toDto(cursoActualizado));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @DeleteMapping("/{cursoId}")
     public ResponseEntity<Void> eliminarCurso(@PathVariable Long cursoId) {
-        // Lógica para eliminar un curso por ID
-        cursoService.eliminarCurso(cursoId);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            if (Optional.ofNullable(cursoId).isEmpty()) return ResponseEntity.badRequest().build();
+            cursoService.eliminarCurso(cursoId);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @GetMapping
     public ResponseEntity<List<CursoDTO>> listarCursos() {
-        // Lógica para listar todos los cursos
-        List<Curso> cursos = cursoService.listarCursos();
-        return ResponseEntity.ok(cursos.parallelStream().map(cursoMapper::toDto).toList());
+        try {
+            List<Curso> cursos = cursoService.listarCursos();
+            if (cursos.isEmpty()) return ResponseEntity.noContent().build();
+            return ResponseEntity.ok(cursos.parallelStream().map(cursoMapper::toDto).toList());
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @PostMapping("/{cursoId}/inscribir/{estudianteId}")
     public ResponseEntity<String> inscribirEstudiante(@PathVariable Long cursoId, @PathVariable Long estudianteId) {
-        //OBTENER ESTUDIANTE
-
-       // cursoService.inscribirEstudianteEnCurso(cursoId, estudianteId);
-        return ResponseEntity.ok("Estudiante inscrito en el curso");
+        try {
+            if (Optional.ofNullable(cursoId).isEmpty() || Optional.ofNullable(estudianteId).isEmpty())
+                return ResponseEntity.badRequest().build();
+            EstudianteDTO estudiante = estudianteRestClient.obtenerEstudiante(estudianteId);
+            estudiante.getCursosInscritos().add(cursoId);
+            estudianteRestClient.actualizarEstudiante(estudiante.getId(), estudiante);
+            cursoService.inscribirEstudianteEnCurso(cursoId, estudianteId);
+            return ResponseEntity.ok("Estudiante inscrito en el curso");
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @PostMapping("/{cursoId}/desinscribir/{estudianteId}")
     public ResponseEntity<String> desinscribirEstudiante(@PathVariable Long cursoId, @PathVariable Long estudianteId) {
-        //OBTENER ESTUDIANTE
-
-       // cursoService.desinscribirEstudianteDeCurso(cursoId, estudianteId);
-        return ResponseEntity.ok("Estudiante desinscrito del curso");
+        try {
+            if (Optional.ofNullable(cursoId).isEmpty() || Optional.ofNullable(estudianteId).isEmpty())
+                return ResponseEntity.badRequest().build();
+            EstudianteDTO estudiante = estudianteRestClient.obtenerEstudiante(estudianteId);
+            estudiante.getCursosInscritos().remove(cursoId);
+            estudianteRestClient.actualizarEstudiante(estudiante.getId(), estudiante);
+            cursoService.desinscribirEstudianteDeCurso(cursoId, estudianteId);
+            return ResponseEntity.ok("Estudiante desinscrito del curso");
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
-
-  /*  @PostMapping("/{cursoId}/inscribir/{estudianteId}")
-    public ResponseEntity<String> inscribirEstudiante(@PathVariable Long cursoId, @PathVariable Long estudianteId) {
-        // Lógica para inscribir al estudiante en este curso
-        // Actualizar la entidad Curso
-        // Actualizar la entidad Estudiante (en su propio servicio)
-        return ResponseEntity.ok("Estudiante inscrito en el curso");
-    }
-
-    @PostMapping("/{cursoId}/desinscribir/{estudianteId}")
-    public ResponseEntity<String> desinscribirEstudiante(@PathVariable Long cursoId, @PathVariable Long estudianteId) {
-        // Lógica para desinscribir al estudiante de este curso
-        // Actualizar la entidad Curso
-        // Actualizar la entidad Estudiante (en su propio servicio)
-        return ResponseEntity.ok("Estudiante desinscrito del curso");
-    }*/
 }
 

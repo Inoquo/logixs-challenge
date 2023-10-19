@@ -5,7 +5,6 @@ import com.logixs.estudiantes.dto.EstudianteDTO;
 import com.logixs.estudiantes.mapper.EstudianteMapper;
 import com.logixs.estudiantes.model.Estudiante;
 import com.logixs.estudiantes.service.EstudianteService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,55 +16,67 @@ import java.util.Optional;
 @RequestMapping("/estudiantes")
 public class EstudianteController {
 
-    @Autowired
-    EstudianteService estudianteService;
+    private final EstudianteService estudianteService;
 
-    @Autowired
-    EstudianteMapper estudianteMapper;
+    private final EstudianteMapper estudianteMapper;
+
+    public EstudianteController(EstudianteService estudianteService, EstudianteMapper estudianteMapper) {
+        this.estudianteService = estudianteService;
+        this.estudianteMapper = estudianteMapper;
+    }
 
     @PostMapping
     public ResponseEntity<EstudianteDTO> crearEstudiante(@RequestBody EstudianteDTO estudianteDTO) {
-        Estudiante nuevoEstudiante = estudianteService.crearEstudiante(estudianteMapper.toEntity(estudianteDTO));
-        return new ResponseEntity<>(estudianteMapper.toDto(nuevoEstudiante), HttpStatus.CREATED);
+        try {
+            if (Optional.ofNullable(estudianteDTO).isEmpty()) return ResponseEntity.badRequest().build();
+            Estudiante nuevoEstudiante = estudianteService.crearEstudiante(estudianteMapper.toEntity(estudianteDTO));
+            return ResponseEntity.status(HttpStatus.CREATED).body(estudianteMapper.toDto(nuevoEstudiante));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @GetMapping("/{estudianteId}")
     public ResponseEntity<EstudianteDTO> obtenerEstudiante(@PathVariable Long estudianteId) {
-        Optional<Estudiante> estudiante = estudianteService.obtenerEstudiantePorId(estudianteId);
-        return ResponseEntity.ok(estudianteMapper.toDto(estudiante.get()));
+        try {
+            if (Optional.ofNullable(estudianteId).isEmpty()) return ResponseEntity.badRequest().build();
+            Optional<Estudiante> curso = estudianteService.obtenerEstudiantePorId(estudianteId);
+            return curso.map(value -> ResponseEntity.ok(estudianteMapper.toDto(value))).orElseGet(() -> ResponseEntity.notFound().build());
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @PutMapping("/{estudianteId}")
     public ResponseEntity<EstudianteDTO> actualizarEstudiante(@PathVariable Long estudianteId, @RequestBody EstudianteDTO estudianteDTO) {
-        Estudiante estudianteActualizado = estudianteService.actualizarEstudiante(estudianteId, estudianteMapper.toEntity(estudianteDTO));
-        return ResponseEntity.ok(estudianteMapper.toDto(estudianteActualizado));
+        try {
+            if (Optional.ofNullable(estudianteId).isEmpty() || Optional.ofNullable(estudianteDTO).isEmpty())
+                return ResponseEntity.badRequest().build();
+            Estudiante estudianteActualizado = estudianteService.actualizarEstudiante(estudianteId, estudianteMapper.toEntity(estudianteDTO));
+            return ResponseEntity.ok(estudianteMapper.toDto(estudianteActualizado));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @DeleteMapping("/{estudianteId}")
     public ResponseEntity<Void> eliminarEstudiante(@PathVariable Long estudianteId) {
-        estudianteService.eliminarEstudiante(estudianteId);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            estudianteService.eliminarEstudiante(estudianteId);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @GetMapping
     public ResponseEntity<List<EstudianteDTO>> listarEstudiantes() {
-        List<Estudiante> estudiantes = estudianteService.listarEstudiantes();
-        return ResponseEntity.ok(estudiantes.parallelStream().map(estudianteMapper::toDto).toList());
+        try {
+            List<Estudiante> estudiantes = estudianteService.listarEstudiantes();
+            if (estudiantes.isEmpty()) return ResponseEntity.noContent().build();
+            return ResponseEntity.ok(estudiantes.parallelStream().map(estudianteMapper::toDto).toList());
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
-
-   /* @PostMapping("/{estudianteId}/inscribir/{cursoId}")
-    public ResponseEntity<String> inscribirEstudianteEnCurso(@PathVariable Long estudianteId, @PathVariable Long cursoId) {
-        // Realizar una solicitud al microservicio de cursos para inscribir al estudiante en el curso
-        restTemplate.postForEntity("http://api-gateway/cursos/" + cursoId + "/inscribir/" + estudianteId, null, String.class);
-        // Lógica adicional para inscribir al estudiante en este servicio
-        return ResponseEntity.ok("Estudiante inscrito en el curso");
-    }
-
-    @PostMapping("/{estudianteId}/desinscribir/{cursoId}")
-    public ResponseEntity<String> desinscribirEstudianteDeCurso(@PathVariable Long estudianteId, @PathVariable Long cursoId) {
-        // Realizar una solicitud al microservicio de cursos para desinscribir al estudiante del curso
-        restTemplate.postForEntity("http://api-gateway/cursos/" + cursoId + "/desinscribir/" + estudianteId, null, String.class);
-        // Lógica adicional para desinscribir al estudiante en este servicio
-        return ResponseEntity.ok("Estudiante desinscrito del curso");
-    }*/
 }

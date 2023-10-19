@@ -16,7 +16,6 @@ public class CursoServiceImpl implements CursoService{
 
     public Curso crearCurso(Curso curso) {
         return cursoRepository.save(curso);
-
     }
 
     public Optional<Curso> obtenerCursoPorId(Long cursoId) {

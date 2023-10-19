@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   postgres:
     image: postgres:latest
@@ -6,11 +6,9 @@ services:
     environment:
       POSTGRES_DB: challengedb
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: pass
     ports:
       - "5432:5432"
-    networks:
-      - network
 
   cursos-ms:
     build:
@@ -19,14 +17,12 @@ services:
     ports:
       - "8080:8080"
     depends_on:
+      - eureka
       - postgres
-    networks:
-      - network
+      - estudiantes-ms
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/challengedb
-#      SPRING_DATASOURCE_USERNAME: user
-#      SPRING_DATASOURCE_PASSWORD:
-
+      - EUREKA_SERVICE_URL=http://eureka:8761
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
 
   estudiantes-ms:
     build:
@@ -35,13 +31,11 @@ services:
     ports:
       - "8081:8081"
     depends_on:
+      - eureka
       - postgres
-    networks:
-      - network
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/challengedb
-#      SPRING_DATASOURCE_USERNAME: admin
-#      SPRING_DATASOURCE_PASSWORD: admin
+      - EUREKA_SERVICE_URL=http://eureka:8761
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
 
   api-gateway:
     build:
@@ -50,28 +44,39 @@ services:
     ports:
       - "8765:8765"
     depends_on:
+      - eureka
       - cursos-ms
       - estudiantes-ms
-      - keycloak
-    networks:
-      - network
-
-  keycloak:
-    image: jboss/keycloak
-    ports:
-      - "8083:8083"
-    networks:
-      - network
     environment:
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+      - EUREKA_SERVICE_URL=http://eureka:8761
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
 
   eureka:
     image: springcloud/eureka
+    container_name: eureka
     ports:
       - "8761:8761"
-    networks:
-      - network
+    environment:
+      - EUREKA_INSTANCE_PREFERIPADDRESS=true
 
-networks:
-  network:
+  config:
+    image: springcloud/configserver
+    container_name: config
+    depends_on:
+      - eureka
+    ports:
+      - "8888:8888"
+    environment:
+      - EUREKA_SERVICE_URL=http://eureka:8761
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+#
+#  keycloak:
+#    image: jboss/keycloak
+#    ports:
+#      - "8083:8083"
+#
+#    environment:
+#      KEYCLOAK_USER: admin
+#      KEYCLOAK_PASSWORD: admin
+#
+
