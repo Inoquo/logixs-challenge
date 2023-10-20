@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class EstudianteRestClient {
     public static final String URL = "http://localhost:8081/estudiantes/";
-    //private static final String endpointUrl = URL + "estudiantes/";
 
     @Autowired
     private RestTemplate restTemplate;

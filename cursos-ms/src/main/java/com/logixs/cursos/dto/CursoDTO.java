@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -17,7 +17,7 @@ public class CursoDTO {
     private Long id;
     private String nombre;
     private String descripcion;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private Set<Long> estudiantesInscritos;
 }

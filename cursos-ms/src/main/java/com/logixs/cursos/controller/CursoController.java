@@ -6,6 +6,7 @@ import com.logixs.cursos.mapper.CursoMapper;
 import com.logixs.cursos.model.Curso;
 import com.logixs.cursos.restClient.EstudianteRestClient;
 import com.logixs.cursos.service.CursoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ public class CursoController {
 
     private final EstudianteRestClient estudianteRestClient;
 
+    @Autowired
     public CursoController(CursoService cursoService, CursoMapper cursoMapper, EstudianteRestClient estudianteRestClient) {
         this.cursoService = cursoService;
         this.cursoMapper = cursoMapper;
@@ -34,7 +36,7 @@ public class CursoController {
         try {
             if (Optional.ofNullable(cursoDTO).isEmpty()) return ResponseEntity.badRequest().build();
             Curso nuevoCurso = cursoService.crearCurso(cursoMapper.toEntity(cursoDTO));
-            return ResponseEntity.status(HttpStatus.CREATED).body(cursoMapper.toDto(nuevoCurso));
+            return ResponseEntity.status(HttpStatus.CREATED).body(cursoMapper.toDTO(nuevoCurso));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().build();
         }
@@ -45,7 +47,8 @@ public class CursoController {
         try {
             if (Optional.ofNullable(cursoId).isEmpty()) return ResponseEntity.badRequest().build();
             Optional<Curso> curso = cursoService.obtenerCursoPorId(cursoId);
-            return curso.map(value -> ResponseEntity.ok(cursoMapper.toDto(value))).orElseGet(() -> ResponseEntity.notFound().build());
+            return curso.map(value -> ResponseEntity.ok(cursoMapper.toDTO(value)))
+                    .orElseGet(() -> ResponseEntity.notFound().build());
         } catch (Exception e) {
             return ResponseEntity.internalServerError().build();
         }
@@ -57,7 +60,7 @@ public class CursoController {
             if (Optional.ofNullable(cursoId).isEmpty() || Optional.ofNullable(cursoDTO).isEmpty())
                 return ResponseEntity.badRequest().build();
             Curso cursoActualizado = cursoService.actualizarCurso(cursoId, cursoMapper.toEntity(cursoDTO));
-            return ResponseEntity.ok(cursoMapper.toDto(cursoActualizado));
+            return ResponseEntity.ok(cursoMapper.toDTO(cursoActualizado));
         } catch (Exception e) {
             return ResponseEntity.internalServerError().build();
         }
@@ -79,7 +82,7 @@ public class CursoController {
         try {
             List<Curso> cursos = cursoService.listarCursos();
             if (cursos.isEmpty()) return ResponseEntity.noContent().build();
-            return ResponseEntity.ok(cursos.parallelStream().map(cursoMapper::toDto).toList());
+            return ResponseEntity.ok(cursos.parallelStream().map(cursoMapper::toDTO).toList());
         } catch (Exception e) {
             return ResponseEntity.internalServerError().build();
         }

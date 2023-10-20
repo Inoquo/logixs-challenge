@@ -3,7 +3,7 @@ package com.logixs.cursos.dto;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Data
@@ -13,6 +13,6 @@ public class EstudianteDTO {
     private Long id;
     private String nombre;
     private String apellido;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private Set<Long> cursosInscritos;
 }
