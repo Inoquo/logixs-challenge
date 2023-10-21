@@ -57,7 +57,7 @@ services:
     ports:
       - "8761:8761"
     environment:
-      - EUREKA_INSTANCE_PREFERIPADDRESS=true
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
 
   config:
     image: springcloud/configserver
