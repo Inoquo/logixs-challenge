@@ -4,18 +4,18 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: estudiantes-ms-route
+        - id: estudiantes-ms
           uri: lb://estudiantes-ms
           predicates:
             - Path=/estudiantes/**
-        - id: cursos-ms-route
+        - id: cursos-ms
           uri: lb://cursos-ms
           predicates:
             - Path=/cursos/**
       discovery:
         locator:
           enabled: true
-
+          filters: enabled
 server:
   port: 8765
 

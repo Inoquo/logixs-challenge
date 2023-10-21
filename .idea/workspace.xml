@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="localDate, inscripciones + otros arreglos">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="arreglos pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/restClient/EstudianteRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/restClient/EstudianteRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/logixs/gateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/logixs/gateway/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cursos-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cursos-ms/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/estudiantes-ms/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/PRUEBAS EMPRESAS/logixs-challenge/cursos-ms/src/test/java/com/logixs/cursos/controller/CursoControllerTest.java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/Desktop/PRUEBAS EMPRESAS/logixs-challenge/cursos-ms/pom.xml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -66,6 +69,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/usuario/Desktop/PRUEBAS EMPRESAS/logixs-challenge/cursos-ms/pom.xml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -89,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.api-gateway: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="logixs-challenge" />
       <working_directory value="$PROJECT_DIR$" />
@@ -252,8 +256,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
         <item itemvalue="JUnit.EstudianteControllerTest.test_noContentResponseWhenListIsNull" />
         <item itemvalue="JUnit.EstudianteControllerTest" />
         <item itemvalue="JUnit.EstudianteControllerTest.test_crearEstudiante_internalServerError" />
@@ -278,6 +282,8 @@
       <workItem from="1697789593508" duration="802000" />
       <workItem from="1697809083098" duration="1701000" />
       <workItem from="1697819625006" duration="1039000" />
+      <workItem from="1697887771603" duration="6016000" />
+      <workItem from="1697905427984" duration="3622000" />
     </task>
     <task id="LOCAL-00001" summary="metodos inscripcion + eureka">
       <option name="closed" value="true" />
@@ -295,7 +301,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697789417331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="keycloak, readme y url estudiantes">
+      <option name="closed" value="true" />
+      <created>1697893777099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697893777099</updated>
+    </task>
+    <task id="LOCAL-00004" summary="arreglos pom">
+      <option name="closed" value="true" />
+      <created>1697894643886</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697894643886</updated>
+    </task>
+    <task id="LOCAL-00005" summary="arreglos pom">
+      <option name="closed" value="true" />
+      <created>1697907216700</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697907216700</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +334,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="metodos inscripcion + eureka" />
     <MESSAGE value="localDate, inscripciones + otros arreglos" />
-    <option name="LAST_COMMIT_MESSAGE" value="localDate, inscripciones + otros arreglos" />
+    <MESSAGE value="keycloak, readme y url estudiantes" />
+    <MESSAGE value="arreglos pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglos pom" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

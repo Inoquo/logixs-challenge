@@ -64,6 +64,8 @@ services:
     container_name: config
     depends_on:
       - eureka
+      - cursos-ms
+      - estudiantes-ms
     ports:
       - "8888:8888"
     environment:
