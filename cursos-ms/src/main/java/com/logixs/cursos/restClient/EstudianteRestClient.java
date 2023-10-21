@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class EstudianteRestClient {
-    public static final String URL = "http://localhost:8081/estudiantes/";
+    public static final String URL = "http://estudiantes-ms:8081/estudiantes/";
 
     @Autowired
     private RestTemplate restTemplate;
