@@ -1,41 +1,40 @@
 # logixs-challenge
-Este proyecto es un code challenge para Logixs.
+This project is a code challenge for Logixs.
 ## About the project
-El proyecto trata sobre una solución que permita gestionar cursos y estudiantes. Está compuesto por dos microservicios
-conectados a través de un API Gateway usando Eureka para el descubrimiento entre las distintas capas montado en Docker.
-Los endpoints generados en los microservicios son los siguientes:
-#### estudiantes-ms
+The project is about a solution to manage courses and students. It is composed of two microservices
+connected through an API Gateway using Eureka for the discovery between the different layers mounted on Docker.
+The endpoints generated in the microservices are the following:
+#### students-ms
 ```
-- POST /estudiantes + @RequestBody EstudianteDTO
-- GET /estudiantes/{estudianteId}
-- PUT /estudiantes/{estudianteId} + @RequestBody EstudianteDTO
-- DELETE /estudiantes/{estudianteId}
-- GET /estudiantes
+- POST /students + @RequestBody StudentDTO
+- GET /students/{studentId}
+- PUT /students/{studentId} + @RequestBody StudentDTO
+- DELETE /students/{studentId}
+- GET /students
 ```
-#### cursos-ms
+#### courses-ms
 ```
-- POST /cursos + @RequestBody CursoDTO
-- GET /cursos/{cursoId}
-- PUT /cursos/{cursoId} + @RequestBody CursoDTO
-- DELETE /cursos/{cursoId}
-- GET /cursos
-- POST /cursos/{cursoId}/inscribir/{estudianteId}
-- POST /cursos/{cursoId}/desinscribir/{estudianteId}
+- POST /courses + @RequestBody CourseDTO
+- GET /courses/{courseId}
+- PUT /courses/{courseId} + @RequestBody CourseDTO
+- DELETE /courses/{courseId}
+- GET /courses
+- POST /courses/{courseId}/enrol/{studentId}
+- POST /courses/{courseId}/unenrol/{studentId}
 ```
-A través de las siguientes url se podrá acceder a swagger y poder lanzar los diferentes métodos de la aplicación:
+Through the following url you can access swagger and visualise the documentation of the microservices:
 
-- http://localhost:8081/swagger-ui/index.html#/ (estudiantes-ms)
-- http://localhost:8080/swagger-ui/index.html#/ (cursos-ms)
+- http://localhost:8081/swagger-ui/index.html#/ (students-ms)
+- http://localhost:8080/swagger-ui/index.html#/ (courses-ms)
 
 ## Building and running the project
-El proyecto ha sido construido con SpringBoot 3.1.4, Java 17, Maven 3.6.3 y PostgreSQL.
-Para lanzarlo se deben ejecutar los siguientes comandos desde la ruta de /logixs-challenge, lo que construirá todos los componentes
-y los ejecutará.
+The project has been built with SpringBoot 3.1.4, Java 17, Maven 3.6.3 and PostgreSQL.
+To launch it you must execute the following commands from the /logixs-challenge path, which will build all the components and run them.
 ```
 mvn clean install
 docker-compose up
 ```
 ## Finishing the project
-Para la finalización de la prueba quedaría incluir Keycloak para la autenticación y autorización de acceso a los aplicativos y sus 
-correspondientes endpoints y de esta manera aplicar una capa de seguridad.
+For the completion of the challenge, it would be necessary to include Keycloak for authentication and authorisation of access to the applications and their corresponding endpoints, thus applying a layer of security.
+and their corresponding endpoints and thus apply a layer of security.
 

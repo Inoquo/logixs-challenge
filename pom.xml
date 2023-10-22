@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>estudiantes-ms</module>
-        <module>cursos-ms</module>
+        <module>students-ms</module>
+        <module>courses-ms</module>
         <module>api-gateway</module>
     </modules>
 </project>

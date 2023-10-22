@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="cursos-ms" />
-        <module name="estudiantes-ms" />
+        <module name="students-ms" />
+        <module name="courses-ms" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
-      <module name="cursos-ms" options="-parameters" />
-      <module name="estudiantes-ms" options="-parameters" />
+      <module name="courses-ms" options="-parameters" />
+      <module name="students-ms" options="-parameters" />
     </option>
   </component>
 </project>

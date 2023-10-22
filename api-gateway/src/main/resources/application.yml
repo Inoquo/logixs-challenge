@@ -4,14 +4,14 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: estudiantes-ms
-          uri: lb://estudiantes-ms
+        - id: students-ms
+          uri: lb://students-ms
           predicates:
-            - Path=/estudiantes/**
-        - id: cursos-ms
-          uri: lb://cursos-ms
+            - Path=/students/**
+        - id: courses-ms
+          uri: lb://courses-ms
           predicates:
-            - Path=/cursos/**
+            - Path=/courses/**
       discovery:
         locator:
           enabled: true

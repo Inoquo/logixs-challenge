@@ -4,7 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="arreglos configuracion" />
+    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="arreglos configuracion">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/mapper/StudentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/students-ms/src/test/java/com/logixs/students/controller/StudentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/CursosMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/CoursesMsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/dto/CursoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/dto/CourseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/dto/EstudianteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/dto/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/mapper/CursoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/mapper/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/repository/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/restClient/EstudianteRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/restClient/StudentRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/service/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursos-ms/src/test/java/com/logixs/cursos/controller/CursoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/test/java/com/logixs/courses/controller/CourseControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/EstudiantesMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/StudentsMsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/controller/EstudianteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/dto/EstudianteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/dto/StudentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/mapper/EstudianteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/repository/EstudianteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/test/java/com/logixs/estudiantes/controller/EstudianteControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,47 +185,47 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="EstudianteControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudiantes-ms" />
+    <configuration name="StudentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-ms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.logixs.estudiantes.controller.*" />
+          <option name="PATTERN" value="com.logixs.students.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.logixs.estudiantes.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.logixs.estudiantes.controller.EstudianteControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.logixs.students.controller.StudentControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstudianteControllerTest.test_crearEstudiante_internalServerError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudiantes-ms" />
+    <configuration name="StudentControllerTest.test_crearEstudiante_internalServerError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-ms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.logixs.estudiantes.controller.*" />
+          <option name="PATTERN" value="com.logixs.students.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.logixs.estudiantes.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.logixs.estudiantes.controller.EstudianteControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.logixs.students.controller.StudentControllerTest" />
       <option name="METHOD_NAME" value="test_crearEstudiante_internalServerError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstudianteControllerTest.test_noContentResponseWhenListIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudiantes-ms" />
+    <configuration name="StudentControllerTest.test_noContentResponseWhenListIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="students-ms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.logixs.estudiantes.controller.*" />
+          <option name="PATTERN" value="com.logixs.students.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.logixs.estudiantes.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.logixs.estudiantes.controller.EstudianteControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.logixs.students.controller.StudentControllerTest" />
       <option name="METHOD_NAME" value="test_noContentResponseWhenListIsNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -191,16 +246,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CursosMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="cursos-ms" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.cursos.CursosMsApplication" />
+    <configuration name="CoursesMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="courses-ms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.cursos.CoursesMsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CursosMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="CoursesMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cursos-ms" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.cursos.CursosMsApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.cursos.CoursesMsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,9 +267,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EstudiantesMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="estudiantes-ms" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.estudiantes.EstudiantesMsApplication" />
+    <configuration name="StudentsMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="students-ms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.logixs.students.StudentsMsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,9 +305,9 @@
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
-        <item itemvalue="JUnit.EstudianteControllerTest.test_noContentResponseWhenListIsNull" />
-        <item itemvalue="JUnit.EstudianteControllerTest" />
-        <item itemvalue="JUnit.EstudianteControllerTest.test_crearEstudiante_internalServerError" />
+        <item itemvalue="JUnit.StudentControllerTest.test_noContentResponseWhenListIsNull" />
+        <item itemvalue="JUnit.StudentControllerTest" />
+        <item itemvalue="JUnit.StudentControllerTest.test_crearEstudiante_internalServerError" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +330,8 @@
       <workItem from="1697809083098" duration="1701000" />
       <workItem from="1697819625006" duration="1039000" />
       <workItem from="1697887771603" duration="6016000" />
-      <workItem from="1697905427984" duration="4180000" />
+      <workItem from="1697905427984" duration="4596000" />
+      <workItem from="1697981496393" duration="3597000" />
     </task>
     <task id="LOCAL-00001" summary="metodos inscripcion + eureka">
       <option name="closed" value="true" />
@@ -325,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697911311226</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="arreglos configuracion">
+      <option name="closed" value="true" />
+      <created>1697911838157</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697911838157</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,47 +410,47 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java</url>
+          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CourseController.java</url>
           <line>38</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java</url>
+          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CourseController.java</url>
           <line>61</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java</url>
+          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CourseController.java</url>
           <line>62</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/controller/EstudianteController.java</url>
+          <url>file://$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/controller/StudentController.java</url>
           <line>55</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentServiceImpl.java</url>
           <line>26</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteServiceImpl.java</url>
+          <url>file://$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentServiceImpl.java</url>
           <line>27</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/controller/EstudianteController.java</url>
+          <url>file://$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/controller/StudentController.java</url>
           <line>57</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/controller/EstudianteController.java</url>
+          <url>file://$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/controller/StudentController.java</url>
           <line>58</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java</url>
+          <url>file://$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CourseController.java</url>
           <line>37</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
@@ -402,6 +466,12 @@
       <FILTER>com.logixs.cursos.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logixs_challenge$CursoControllerTest_test_http_status_code_400_null_curso_id.ic" NAME="CursoControllerTest.test_http_status_code_400_null_curso_id Coverage Results" MODIFIED="1697782995531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.logixs.cursos.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/logixs_challenge$CourseControllerTest_test_http_status_code_400_null_curso_id.ic" NAME="CourseControllerTest.test_http_status_code_400_null_curso_id Coverage Results" MODIFIED="1697782995531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.logixs.cursos.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/logixs_challenge$CourseControllerTest.ic" NAME="CourseControllerTest Coverage Results" MODIFIED="1697783239723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.logixs.cursos.controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/logixs_challenge$EstudianteControllerTest.ic" NAME="EstudianteControllerTest Coverage Results" MODIFIED="1697786194875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
