@@ -14,7 +14,7 @@ public class StudentRestClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    public StudentDTO obtenerStudent(Long studentId) {
+    public StudentDTO getStudent(Long studentId) {
         try {
             String endpointUrl = URL + studentId;
             ResponseEntity<StudentDTO> studentDTO = restTemplate.exchange(endpointUrl,

@@ -65,7 +65,7 @@ public class StudentControllerTest {
     }
 
     @Test
-    public void test_obtenerStudent_existingId_returns200OkWithStudentData() {
+    public void test_getStudent_existingId_returns200OkWithStudentData() {
         Long studentId = 1L;
 
         StudentDTO studentDTO = new StudentDTO();
@@ -141,7 +141,7 @@ public class StudentControllerTest {
     }
 
     @Test
-    public void test_obtenerStudent_nonExistingId_returns404NotFound() {
+    public void test_getStudent_nonExistingId_returns404NotFound() {
         Long studentId = 100L;
 
         when(studentService.getStudentById(studentId)).thenReturn(Optional.empty());
@@ -236,7 +236,7 @@ public class StudentControllerTest {
     }
 
     @Test
-    public void test_listarStudents() {
+    public void test_listStudents() {
         List<Student> students = new ArrayList<>();
         students.add(new Student(1L, "John", "Doe", LocalDate.now(), new HashSet<>()));
         students.add(new Student(2L, "Jane", "Smith", LocalDate.now(), new HashSet<>()));
@@ -249,7 +249,7 @@ public class StudentControllerTest {
     }
 
     @Test
-    public void test_listarStudents_returnsStudentDTOListInSameOrder() {
+    public void test_listStudents_returnsStudentDTOListInSameOrder() {
         List<Student> students = new ArrayList<>();
         Student student1 = new Student(1L, "John", "Doe", LocalDate.now(), new HashSet<>());
         Student student2 = new Student(2L, "Jane", "Smith", LocalDate.now(), new HashSet<>());
@@ -295,7 +295,7 @@ public class StudentControllerTest {
     }
 
     @Test
-    public void test_listarStudents_returnsListOfStudentDTO() {
+    public void test_listStudents_returnsListOfStudentDTO() {
         List<Student> students = new ArrayList<>();
         Student student1 = new Student(1L, "John", "Doe", LocalDate.now(), new HashSet<>());
         Student student2 = new Student(2L, "Jane", "Smith", LocalDate.now(), new HashSet<>());

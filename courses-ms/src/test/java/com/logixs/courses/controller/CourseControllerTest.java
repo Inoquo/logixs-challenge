@@ -170,7 +170,7 @@ public class CourseControllerTest {
     }
 
     @Test
-    public void test_deleteCourse_callsEliminarCourse() {
+    public void test_deleteCourse_callsDeleteCourse() {
         Long courseId = 1L;
 
         ResponseEntity<Void> response = courseController.deleteCourse(courseId);
@@ -216,7 +216,7 @@ public class CourseControllerTest {
         Mockito.when(courseMapper.toDTO(course2)).thenReturn(courseDTO2);
 
 
-        ResponseEntity<List<CourseDTO>> response = courseController.listarCourses();
+        ResponseEntity<List<CourseDTO>> response = courseController.listCourses();
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(2, response.getBody().size());
@@ -237,7 +237,7 @@ public class CourseControllerTest {
         List<Course> courses = new ArrayList<>();
         Mockito.when(courseService.listCourses()).thenReturn(courses);
 
-        ResponseEntity<List<CourseDTO>> response = courseController.listarCourses();
+        ResponseEntity<List<CourseDTO>> response = courseController.listCourses();
 
         assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
         assertNull(response.getBody());
@@ -256,7 +256,7 @@ public class CourseControllerTest {
 
         Mockito.when(courseService.listCourses()).thenReturn(courses);
 
-        ResponseEntity<List<CourseDTO>> response = courseController.listarCourses();
+        ResponseEntity<List<CourseDTO>> response = courseController.listCourses();
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
@@ -265,7 +265,7 @@ public class CourseControllerTest {
     public void test_handle_and_return_internal_server_error_response_when_exception_occurs() {
         Mockito.when(courseService.listCourses()).thenThrow(new RuntimeException());
 
-        ResponseEntity<List<CourseDTO>> response = courseController.listarCourses();
+        ResponseEntity<List<CourseDTO>> response = courseController.listCourses();
 
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
     }

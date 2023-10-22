@@ -4,62 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="arreglos configuracion">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/repository/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/service/StudentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students-ms/src/test/java/com/logixs/students/controller/StudentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/CursosMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/CoursesMsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/config/RestClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/dto/CursoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/dto/CourseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/dto/EstudianteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/dto/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/mapper/CursoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/repository/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/repository/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/restClient/EstudianteRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/restClient/StudentRestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/java/com/logixs/cursos/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/com/logixs/courses/service/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cursos-ms/src/test/java/com/logixs/cursos/controller/CursoControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/test/java/com/logixs/courses/controller/CourseControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/EstudiantesMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/StudentsMsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/controller/EstudianteController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/dto/EstudianteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/dto/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/mapper/EstudianteMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/java/com/logixs/students/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/repository/EstudianteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/java/com/logixs/estudiantes/service/EstudianteServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/students-ms/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiantes-ms/src/test/java/com/logixs/estudiantes/controller/EstudianteControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2a8d1829-512d-47ce-b41e-5b701f0491ac" name="Changes" comment="refactorizacion traduccion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,7 +276,7 @@
       <workItem from="1697819625006" duration="1039000" />
       <workItem from="1697887771603" duration="6016000" />
       <workItem from="1697905427984" duration="4596000" />
-      <workItem from="1697981496393" duration="3597000" />
+      <workItem from="1697981496393" duration="4413000" />
     </task>
     <task id="LOCAL-00001" summary="metodos inscripcion + eureka">
       <option name="closed" value="true" />
@@ -389,11 +334,30 @@
       <option name="project" value="LOCAL" />
       <updated>1697911838157</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactorizacion traduccion">
+      <option name="closed" value="true" />
+      <created>1697985897533</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697985897533</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="metodos inscripcion + eureka" />
@@ -401,7 +365,8 @@
     <MESSAGE value="keycloak, readme y url estudiantes" />
     <MESSAGE value="arreglos pom" />
     <MESSAGE value="arreglos configuracion" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglos configuracion" />
+    <MESSAGE value="refactorizacion traduccion" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactorizacion traduccion" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

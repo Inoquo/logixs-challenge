@@ -78,7 +78,7 @@ public class CourseController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CourseDTO>> listarCourses() {
+    public ResponseEntity<List<CourseDTO>> listCourses() {
         try {
             List<Course> courses = courseService.listCourses();
             if (courses.isEmpty()) return ResponseEntity.noContent().build();
@@ -93,7 +93,7 @@ public class CourseController {
         try {
             if (Optional.ofNullable(courseId).isEmpty() || Optional.ofNullable(studentId).isEmpty())
                 return ResponseEntity.badRequest().build();
-            StudentDTO student = studentRestClient.obtenerStudent(studentId);
+            StudentDTO student = studentRestClient.getStudent(studentId);
             student.getEnrolledCourses().add(courseId);
             studentRestClient.updateStudent(student.getId(), student);
             courseService.enrolStudentInCourse(courseId, studentId);
@@ -108,7 +108,7 @@ public class CourseController {
         try {
             if (Optional.ofNullable(courseId).isEmpty() || Optional.ofNullable(studentId).isEmpty())
                 return ResponseEntity.badRequest().build();
-            StudentDTO student = studentRestClient.obtenerStudent(studentId);
+            StudentDTO student = studentRestClient.getStudent(studentId);
             student.getEnrolledCourses().remove(courseId);
             studentRestClient.updateStudent(student.getId(), student);
             courseService.unenrolStudentFromCourse(courseId, studentId);
