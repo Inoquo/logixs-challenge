@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class StudentRestClient {
-    public static final String URL = "http://students-ms:8081/students/";
+    public static final String URL = "http://students-ms:8081/students/"; // REVISAR URL, LLAMAR AL API-GATEWAY??
 
     @Autowired
     private RestTemplate restTemplate;
